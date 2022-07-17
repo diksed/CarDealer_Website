@@ -72,6 +72,7 @@
     <Content Include="ContactPage.aspx" />
     <Content Include="ListCars.aspx" />
     <Content Include="MainPage.aspx" />
+    <Content Include="Register.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -89,6 +90,7 @@
     <Compile Include="AddCars.aspx.designer.cs">
       <DependentUpon>AddCars.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Classes\Sha256Converter.cs" />
     <Compile Include="Classes\SqlConnectionClass.cs" />
     <Compile Include="ContactPage.aspx.cs">
       <DependentUpon>ContactPage.aspx</DependentUpon>
@@ -119,6 +121,13 @@
       <DependentUpon>MainPage.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Register.aspx.cs">
+      <DependentUpon>Register.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Register.aspx.designer.cs">
+      <DependentUpon>Register.aspx</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Content Include="Layout.Master" />

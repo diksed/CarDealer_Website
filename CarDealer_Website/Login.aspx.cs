@@ -28,7 +28,14 @@ namespace CarDealer_Website
             SqlDataAdapter da = new SqlDataAdapter(commLogin);
             da.Fill(dt);
             if (dt.Rows.Count > 0)
-                Response.Write("Successfully logged in!");
+            {
+                if (tboxMail.Text == "sedatkavak@yahoo.com")
+                    Response.Redirect("Admin.aspx");
+                else
+                {
+
+                }
+            }
             else
             {
                 Response.Write("Mail address or password is incorrect!");

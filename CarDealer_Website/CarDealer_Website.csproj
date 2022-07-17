@@ -69,6 +69,7 @@
   <ItemGroup>
     <Content Include="About.aspx" />
     <Content Include="AddCars.aspx" />
+    <Content Include="Admin.aspx" />
     <Content Include="ContactPage.aspx" />
     <Content Include="ListCars.aspx" />
     <Content Include="Login.aspx" />
@@ -90,6 +91,20 @@
     </Compile>
     <Compile Include="AddCars.aspx.designer.cs">
       <DependentUpon>AddCars.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin.aspx.cs">
+      <DependentUpon>Admin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin.aspx.designer.cs">
+      <DependentUpon>Admin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminLayout.Master.cs">
+      <DependentUpon>AdminLayout.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminLayout.Master.designer.cs">
+      <DependentUpon>AdminLayout.Master</DependentUpon>
     </Compile>
     <Compile Include="Classes\Sha256Converter.cs" />
     <Compile Include="Classes\SqlConnectionClass.cs" />
@@ -139,6 +154,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Layout.Master" />
+    <Content Include="AdminLayout.Master" />
     <None Include="packages.config" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>

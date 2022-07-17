@@ -28,7 +28,17 @@ namespace CarDealer_Website
 
         protected void buttonSend_Click(object sender, EventArgs e)
         {
-
+            SqlCommand commAdd = new SqlCommand("INSERT INTO TableCar (CarModel,CarBrandID,CarFuelType,CarDescription,CarContact,CarDealer,CarPhoto,CarPrice) values (@pmodel,@pbrand,@pfuel,@pdescription,@pcontact,@pdealer,@pphoto,@pprice)",SqlConnectionClass.conn);
+            SqlConnectionClass.CheckConn();
+            commAdd.Parameters.AddWithValue("@pmodel", tboxModel.Text);
+            commAdd.Parameters.AddWithValue("@pbrand", Convert.ToInt32(combobox.SelectedValue));
+            commAdd.Parameters.AddWithValue("@pfuel", tboxFuel.Text);
+            commAdd.Parameters.AddWithValue("@pdescription", tboxDescription.Text);
+            commAdd.Parameters.AddWithValue("@pcontact", tboxContact.Text);
+            commAdd.Parameters.AddWithValue("@pdealer", tboxDealer.Text);
+            commAdd.Parameters.AddWithValue("@pphoto", tboxPhoto.Text);
+            commAdd.Parameters.AddWithValue("@pprice", tboxPrice.Text);
+            commAdd.ExecuteNonQuery();
         }
     }
 }

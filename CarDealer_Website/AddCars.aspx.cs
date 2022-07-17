@@ -4,6 +4,8 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using System.Data.SqlClient;
+using CarDealer_Website.Classes;
 
 namespace CarDealer_Website
 {
@@ -11,7 +13,13 @@ namespace CarDealer_Website
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            SqlCommand commListBrands = new SqlCommand("Select * from TableBrand",SqlConnectionClass.conn);
+            SqlConnectionClass.CheckConn();
+            SqlDataReader dr = commListBrands.ExecuteReader();
+            combobox.DataTextField = "BrandName";
+            combobox.DataValueField = "BrandID";
+            combobox.DataSource = dr;
+            combobox.DataBind();
         }
 
         protected void buttonSend_Click(object sender, EventArgs e)

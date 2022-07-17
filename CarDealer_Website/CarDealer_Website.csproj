@@ -71,6 +71,7 @@
     <Content Include="AddCars.aspx" />
     <Content Include="ContactPage.aspx" />
     <Content Include="ListCars.aspx" />
+    <Content Include="Login.aspx" />
     <Content Include="MainPage.aspx" />
     <Content Include="Register.aspx" />
     <Content Include="Web.config" />
@@ -112,6 +113,13 @@
     </Compile>
     <Compile Include="ListCars.aspx.designer.cs">
       <DependentUpon>ListCars.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
     </Compile>
     <Compile Include="MainPage.aspx.cs">
       <DependentUpon>MainPage.aspx</DependentUpon>

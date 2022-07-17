@@ -69,6 +69,7 @@
   <ItemGroup>
     <Content Include="About.aspx" />
     <Content Include="AddCars.aspx" />
+    <Content Include="ContactPage.aspx" />
     <Content Include="ListCars.aspx" />
     <Content Include="MainPage.aspx" />
     <Content Include="Web.config" />
@@ -89,6 +90,13 @@
       <DependentUpon>AddCars.aspx</DependentUpon>
     </Compile>
     <Compile Include="Classes\SqlConnectionClass.cs" />
+    <Compile Include="ContactPage.aspx.cs">
+      <DependentUpon>ContactPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ContactPage.aspx.designer.cs">
+      <DependentUpon>ContactPage.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Layout.Master.cs">
       <DependentUpon>Layout.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

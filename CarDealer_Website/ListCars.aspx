@@ -1,4 +1,5 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Layout.Master" AutoEventWireup="true" CodeBehind="ListCars.aspx.cs" Inherits="CarDealer_Website.ListCars" %>
+
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <form id="form1" runat="server">
         <asp:DataList ID="DataList1" runat="server">
@@ -6,9 +7,9 @@
                 <table class="nav-justified">
                     <tr>
                         <td style="height: 20px">
+                            <asp:Label ID="Label2" runat="server" Text='<%# Eval("BrandName") %>'></asp:Label>
+                            &nbsp;
                             <asp:Label ID="Label1" runat="server" Text='<%# Eval("CarModel") %>'></asp:Label>
-                            &nbsp;&nbsp;
-                            <asp:Label ID="Label2" runat="server" Text='<%# Eval("CarBrandID") %>'></asp:Label>
                         </td>
                     </tr>
                     <tr>

@@ -13,7 +13,7 @@ namespace CarDealer_Website
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            SqlCommand commandList = new SqlCommand("Select * from TableCar where CarConfirmation=@pcon",SqlConnectionClass.conn);
+            SqlCommand commandList = new SqlCommand("Select CarID,CarModel,CarBrandID,CarFuelType,CarDescription,CarContact,CarDealer,CarPhoto,CarPrice,CarConfirmation,BrandID,BrandName from TableCar inner join TableBrand on TableCar.CarBrandID=TableBrand.BrandID where CarConfirmation=@pcon",SqlConnectionClass.conn);
             SqlConnectionClass.CheckConn();
             commandList.Parameters.AddWithValue("@pcon", true);
             SqlDataReader dr = commandList.ExecuteReader();
